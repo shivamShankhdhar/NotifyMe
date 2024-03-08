@@ -7,7 +7,6 @@ import { getAveragePrice, getHighestPrice, getLowestPrice } from "../utils";
 import { User } from "@/types";
 import Error from "next/error";
 import { generateEmailBody, sendEmail } from "../nodemailer";
-
 export async function scrapeAndStoreProduct(productUrl:string){
   if(!productUrl) return;
   try{
@@ -85,16 +84,19 @@ export async function addUserEmailToProduct(productId:string,userEmail:string){
 
     if(!product) return;
 
-    const userExsists = product.users.some((user:User) => user.email === userEmail);
+    const userExists = product.users.some((user:User) => user.email === userEmail);
   
-    if(!userExsists) product.users.push({email:userEmail});
+    if(!userExists) product.users.push({email:userEmail});
+    else return new Promise((resolve,reject) => reject("User already exists"));
 
     await product.save();
 
     const emailContent = await generateEmailBody(product,"WELCOME")
- await sendEmail(emailContent,[userEmail]);
+    await sendEmail(emailContent,[userEmail]);
+
+   
 
   } catch (error:any) {
-    console.log(error.message);
+    return ;
   }
 }

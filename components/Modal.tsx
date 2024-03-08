@@ -4,6 +4,8 @@ import { Dialog, Transition } from '@headlessui/react'
 import Image from 'next/image'
 import { addUserEmailToProduct } from '@/lib/actions'
 
+import { toast } from 'react-toastify';
+
 interface Props{
   productId:string
 }
@@ -16,11 +18,42 @@ const Modal = ({ productId }:Props) => {
   const handleOnSubmit = async (event:FormEvent<HTMLFormElement>) =>{
     setIsSubmitting(true);
     event.preventDefault();
+    let isUserAdded = false;
 
-    await addUserEmailToProduct(productId, emailInputData);
-    setIsSubmitting(true);
-    setEmailInputData("");
-    setIsOpen(false);
+    await addUserEmailToProduct(productId, emailInputData).then((res) => {
+      if(res == "User already exists") {isUserAdded = false}
+      else{isUserAdded = true}}).catch((err) => console.log(err));
+
+    if(isUserAdded) {
+      toast.success("Your email has been added to track this item ...", {
+        position: "top-left",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+        });
+      setIsSubmitting(false);
+      setEmailInputData("");
+      setIsOpen(false);
+    }else{
+      toast.success("Your email has been added to track this item ...", {
+        position: "top-left",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+        });
+      setIsSubmitting(false);
+      setEmailInputData(emailInputData);
+      setIsOpen(true);
+    }
+    
   }
   return (
     <>
