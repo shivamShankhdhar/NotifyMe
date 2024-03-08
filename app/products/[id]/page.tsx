@@ -168,7 +168,7 @@ const ProductDetails = async ({params:{id}}:Props) => {
     <p className="section-text">Similar Products</p>
     
     <div className="flex flex-wrap gap-10 mt-7 w-full">
-      {similarProducts && similarProducts.length >0 && similarProducts.map((product:Product) => (
+      {similarProducts &&  similarProducts.map((product:Product) => (
         <ProductCard key={product._id} product={product} />
       ))}
     </div>
