@@ -1,36 +1,48 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+SCREENSHOTS OF THE PROJECT 
 
-## Getting Started
+HOME PAGE 
 
-First, run the development server:
+![image](https://github.com/shivamShankhdhar/NotifyMe/assets/39639414/f443e5f2-61e8-405d-a1c8-257c10755380)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+LATEST PRODUCTS SCREEN
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+![image](https://github.com/shivamShankhdhar/NotifyMe/assets/39639414/33c8588f-84f0-4e09-8e4b-3843bb85470e)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+PASTE AMAZON PRODUCT LONK
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+![image](https://github.com/shivamShankhdhar/NotifyMe/assets/39639414/fb364986-cd91-4c7b-a22e-ce958295782d)
 
-## Learn More
+SEARCHING FOR PRODUCT AND CHECKING THE LINK IS VALID OR NOT 
+![image](https://github.com/shivamShankhdhar/NotifyMe/assets/39639414/983d8e36-cef9-451b-b622-d25ca26bccc4)
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+PRODUCT WILL BE ADDED TO THE LATEST PRODUCTS 
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+![image](https://github.com/shivamShankhdhar/NotifyMe/assets/39639414/3c6f468f-36c7-4b16-81a1-2ea8900f13c5)
 
-## Deploy on Vercel
+CLICK TO GO THO THE PRODUCT DETAILS PAGE
+![image](https://github.com/shivamShankhdhar/NotifyMe/assets/39639414/475fb865-7640-43f4-9851-85dd5e660dc5)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+ON THE PRODUCT DETAILS PAGE HIGHEST PRICE, LOWEST PRICE, AVERAGE PRICE IS SHOWING AND A BUTTON OF TRACK 
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+![image](https://github.com/shivamShankhdhar/NotifyMe/assets/39639414/deaa9ba6-5965-4b4b-8500-997de57cc790)
+
+CLICK TO THE BUTTON TRACK TO TRACK THE PRODUCT AND CLICK TO OPEN THE MODEL 
+
+![image](https://github.com/shivamShankhdhar/NotifyMe/assets/39639414/bf6f580d-0470-48fa-94c3-64ae282dabdb)
+
+A NICE NOTIFICATION IS SHOWS AFTER THE EMAIL IS ADDED TO THE DB TO TRACK THE PRODUCT
+
+![image](https://github.com/shivamShankhdhar/NotifyMe/assets/39639414/cd239c82-b8ba-4b65-8771-74cb5dcdbd5a)
+
+
+
+
+
+
+
+
+
+
+
+
