@@ -10,7 +10,8 @@ import { generateEmailBody, sendEmail } from "../nodemailer";
 export async function scrapeAndStoreProduct(productUrl:string){
   if(!productUrl) return;
   try{
-  connectToDB();
+  const isConnected = connectToDB();
+  // console.log(isConnected)
   const scrapedProduct = await scrapeAmazonProduct(productUrl);
   
   if(!scrapedProduct) return;
@@ -45,7 +46,8 @@ revalidatePath(`products/${newProduct._id}`);
 
 export async function getProductById(productId:string){
 try {
-  connectToDB();
+  const isConnected = connectToDB();
+  // console.log(isConnected)
   const product = await Product.findOne({ _id:productId});
   if(!product) return null; 
   return product;
@@ -57,7 +59,8 @@ try {
 
 export async function getAllProducts(){
   try {
-    connectToDB();
+     connectToDB().then(() => console.log("connected to db")).catch((error) => console.log(error));
+  
     const products = await Product.find();
     return products;
   }catch (error:any) {
@@ -66,7 +69,8 @@ export async function getAllProducts(){
 }
 export async function getSimilarProducts(productId:string){
   try {
-    connectToDB();
+    const isConnected = connectToDB();
+  console.log(`get similar products : ${isConnected}`)
     const currentProduct = await Product.findById(productId);
 
     if(!currentProduct) return {};

@@ -25,7 +25,7 @@ export async function generateEmailBody(
 
   switch (type) {
     case Notification.WELCOME:
-      subject = `Welcome to Price Tracking for ${shortenedTitle}`;
+      subject = `Welcome to NotifyMe.com for ${shortenedTitle}`;
       body = `
         <div>
           <h2>Welcome to NotifyMe.com🚀</h2>

@@ -20,11 +20,13 @@ const ProductDetails = async ({params:{id}}:Props) => {
 <div className='product-container  ' >
   <div className='flex gap-28 xl:flex-row flex-col'>
     <div className='product-image '>
+      {product.image &&
       <Image src={product.image}
       alt={product.title}
       width={380} 
       height={200}
       className="mx-auto" />
+}
 
 <Link href={product.url} target="_blank">
   <button className='btn w-fit mx-auto flex items-center gap-3 min-w-[150px] max-h-10'>

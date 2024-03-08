@@ -9,8 +9,9 @@ const ProductCard = ({product}:Props) => {
   return (
       <Link href = {`/products/${product._id}`} className='product-card'>
 <div className='product-card_img-container'>
+{product.image &&
         <Image src={product.image} alt={product.title} width={100} height={100}
-        className='product-card_img object-contain'/>
+        className='product-card_img object-contain'/>}
         </div>
         <div className="flex flex-col gap-3">
           <h3 className='product-title'>{product.title}</h3>
