@@ -42,6 +42,9 @@ const SearchBar = () => {
         theme: "light",
         });
       setSaerchInput("")
+            
+      setLoading(false);
+      return;
     }else{
       setLoading(true);
       toast.success('Searching for product ...', {
@@ -91,6 +94,7 @@ const SearchBar = () => {
         progress: undefined,
         theme: "light",
         });
+        return;
     }finally{
       setLoading(false);
     }
